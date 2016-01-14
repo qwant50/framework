@@ -1,0 +1,181 @@
+<div class="container">
+    <!-- breadcrumb -->
+    <div class="row">
+        <div class=" col-md-12">
+            <ol class="breadcrumb">
+                <li><a href="#">Cabinet</a></li>
+                <li><a href="#">Courses</a></li>
+                <li class="active">Edit course</li>
+            </ol>
+        </div>
+    </div>
+    <div class="row">
+        <div class=" col-md-12">
+            <div class="course_panel_header">
+                <div class="course_chapters">
+                    <h4> Course chapters:</h4>
+                </div>
+                <div class="lecture_modification">
+                    <a href="">Add </a>|
+                    <a href=""> Move up </a>|
+                    <a href=""> Move down </a>|
+                    <a href=""> Delete</a>
+                </div>
+            </div>
+            <div class="list-group clearfix">
+                <a href="#" class="list-group-item" data-toggle="collapse" data-target="#chapter1">Chapter 1 -
+                    Introduction to PHP 7</a>
+
+                <div id="chapter1" class="sublinks collapse panel panel-default">
+                    <div class="row">
+                        <div class=" col-md-12">
+                            <div class="panel-heading">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs nav-justified">
+                                    <li class="active"><a href="#lection" data-toggle="tab">Lecture</a></li>
+                                    <li><a href="#test" data-toggle="tab">Test</a></li>
+                                </ul>
+                            </div>
+                            <div class="panel-body">
+                                <div class="tab-content">
+                                    <div id="lection" class="tab-pane active">   <!-- lection tab -->
+                                        <br>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label>Lecture text:</label>
+                                                    <textarea rows="5" class="form-control" name="lecture"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+
+                                                <div class="form-group">
+                                                    <label for="additional_file1">Add related text, audio, video and
+                                                        etc. files:</label>
+                                                    <input type="file" id="additional_file1">
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input type="file" id="additional_file2">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-md-2 col-md-offset-10">
+                                                <input type="submit" class="btn btn-success btn-block" value="Save">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="test" class="tab-pane">  <!-- lection tab -->
+                                        <br>
+
+                                        <div class="row">
+                                            <div class=" col-md-12">
+                                                <div class="test_panel_header">
+                                                    <div class="test_name">
+                                                        <h4> Questions:</h4>
+                                                    </div>
+                                                    <div class="test_modification">
+                                                        <a href="">Add </a>|
+                                                        <a href=""> Move up </a>|
+                                                        <a href=""> Move down </a>|
+                                                        <a href=""> Delete</a>
+                                                    </div>
+                                                </div>
+                                                <div class="list-group clearfix">
+                                                    <a href="#" class="list-group-item" data-toggle="collapse"
+                                                       data-target="#sm">Question 1</a>
+
+                                                    <div id="sm" class="sublinks collapse well">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                    <textarea rows="3" class="form-control" name="question"
+                                              placeholder="Enter question"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12 answers_label">
+                                                                Answers. <span class="label label-info">Info</span>
+                                                                Right variants must be checked.
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-8">
+                                                                <div class="form-group">
+                                                                    <div class="input-group">
+                                <span class="input-group-addon">
+                                     <input type="checkbox" aria-label="...">
+                                </span>
+                                                                        <input type="text" class="form-control"
+                                                                               aria-label="...">
+                                                                    </div>
+                                                                    <!-- /input-group -->
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 padding_t9">
+                                                                <a href="#">Delete</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-8">
+                                                                <div class="form-group">
+                                                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <input type="checkbox" aria-label="...">
+                                        </span>
+                                                                        <input type="text" class="form-control"
+                                                                               aria-label="...">
+                                                                    </div>
+                                                                    <!-- /input-group -->
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 padding_t9">
+                                                                <a href="#">Delete</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <a href="#">Add new answer</a>
+                                                            </div>
+                                                        </div>
+                                                        <hr class="color_c0">
+                                                        <div class="row">
+                                                            <div class="col-md-2 col-md-offset-10">
+                                                                <input type="submit" class="btn btn-success btn-block"
+                                                                       value="Save question">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--  well -->
+                                                    <a href="#" class="list-group-item">Question 2</a>
+                                                    <a href="#" class="list-group-item">Question 3</a>
+                                                    <a href="#" class="list-group-item">Question 4</a>
+                                                    <a href="#" class="list-group-item">Question 5</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="list-group-item">Chapter 2 - PHP 7 Backward compatibility</a>
+                <a href="#" class="list-group-item">Chapter 3 - High Impact features</a>
+                <a href="#" class="list-group-item">Chapter 4 - Middleware and PSR-7 Fundamentals</a>
+                <a href="#" class="list-group-item">Chapter 5 - Conclusions </a>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+

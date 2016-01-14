@@ -11,7 +11,7 @@
 class Router
 {
     public $page;
-    public $controller;
+    public $controller = null;
     public $model;
     public $view;
 
@@ -21,9 +21,10 @@ class Router
         $url = rtrim($url, '/');
         $url = explode('/', $url);
         $file = DIR_TO_PAGES.$url[2].TEMPLATE_EXTENSION;
-        $this->controller = file_exists($file) ? $url[2] : 'error404';
+        $this->page = file_exists($file) ? $url[2] : 'error404';
+
 
         $view = new View();
-        echo $view->render($this->controller,'layouts' . DS . 'default');
+        echo $view->render($this->page,'layouts' . DS . 'default');
     }
 }

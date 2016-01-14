@@ -214,3 +214,89 @@ body {
 	text-align: justify;
 	text-indent: 30px;
 }
+
+/* login */
+.clear {clear: both;}
+
+.forgot_password {
+    text-align: center;
+    padding: 10px 0px;
+}
+
+/* addNewCourse */
+
+.course_panel {
+    border-radius: 3px;
+    border: 1px solid #b8b8b8;
+    padding: 5px 8px;
+    margin: 10px 0px;
+    font-size: 14px;
+}
+
+.course_panel_header {
+    padding-bottom: 23px;
+}
+.course_name {
+    float:left;
+}
+.date_modification {
+    float:right;
+}
+
+.course_img {
+    float: left;
+}
+
+.course_text {
+    height: 100px;
+    margin-left: 110px;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.course_rating {
+
+}
+.course_status {
+    text-align: center;
+}
+
+.course_submit {
+    text-align:right;
+}
+
+/* editCourses */
+
+.course_chapters {
+    float: left;
+}
+
+.lecture_modification {
+    float: right;
+    padding-top: 12px;
+}
+
+.test_name {
+    float: left;
+}
+
+.test_modification {
+    float: right;
+    padding-top: 12px;
+}
+
+.answers_label {
+    padding-bottom: 10px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.padding_t9 {
+    padding-top: 9px;
+}
+
+.color_c0 {
+    border-top-color: #C0C0C0;
+}

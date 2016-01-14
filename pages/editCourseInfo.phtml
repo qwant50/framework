@@ -1,0 +1,92 @@
+<div class="container">
+    <section class="editCourseInfo">
+        <div class="row">
+            <div class=" col-md-12">
+                <ol class="breadcrumb">
+                    <li><a href="#">Cabinet</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li class="active">Edit course info</li>
+                </ol>
+            </div>
+        </div>
+        <div class="row">
+            <div class=" col-md-12">
+                <h4><br/>Edit course info: </h4>
+            </div>
+        </div>
+        <hr>
+        <form class="editCourseInfo-form">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="course_type">Course type:</label>
+                        <select class="form-control" id="course_type">
+                            <option>Chose the variant:</option>
+                            <option>PHP</option>
+                            <option>HTML</option>
+                            <option>CSS</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="course_name">Course name:</label>
+                        <input type="text" class="form-control" id="course_name" placeholder="Course name">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="course_difficult">Difficul level:</label>
+                        <select class="form-control" id="course_difficult">
+                            <option>Chose the variant:</option>
+                            <option>Beginner</option>
+                            <option>Intermediate</option>
+                            <option>Advanced</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="course_duration">Course duration (format:YYYY-MM-DD-hh-mm):</label>
+                        <input type="text" class="form-control" id="course_duration" placeholder="YYYY-MM-DD-hh-mm">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <span class="add-photo__title">Course image:</span>
+                    <img class="img-responsive" src="images/img_100.png" height="100" width="100" alt="course image">
+
+                </div>
+                <div class="col-md-10">
+                    <div class="form-group">
+                        <label for="course_img">Chose the image file:</label>
+                        <input type="file" id="course_img">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Brief description:</label>
+                        <textarea rows="5" class="form-control" name="BriefDescription"></textarea>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Full description:</label>
+                        <textarea rows="8" class="form-control" name="FullDescription"></textarea>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-2 col-md-offset-10">
+                    <input type="submit" class="btn btn-success btn-block"  value="Save">
+                </div>
+            </div>
+        </form>
+
+    </section>
+</div>
+<!-- end form -->
