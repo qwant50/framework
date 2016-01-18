@@ -20,9 +20,10 @@ class Router
         $url = $_SERVER["REQUEST_URI"];
         $url = rtrim($url, '/');
         $url = explode('/', $url);
-        $file = DIR_TO_PAGES.$url[2].TEMPLATE_EXTENSION;
-        $this->page = file_exists($file) ? $url[2] : 'error404';
-
+        $file = DIR_TO_PAGES.$url[3].TEMPLATE_EXTENSION;
+       // var_dump($url);
+        $this->page = file_exists($file) ? $url[3] : 'error404';
+//echo $this->page;
 
         $view = new View();
         echo $view->render($this->page,'layouts' . DS . 'default');
