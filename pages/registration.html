@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Edu.local</title>
+
+	<!-- Bootstrap -->
+	<link href="../public/css/bootstrap.css" rel="stylesheet">
+	<link href="../public/css/registration.css" rel="stylesheet">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-9">
+
+			<section class="registration">
+				<div class="row">
+					<div class="col-md-12">
+						<h2 class="registration__title">Регистрация</h2>
+						<hr>
+					</div>
+				</div>
+				<form class="registration__form">
+					<div class="row">
+						<div class="col-md-3 col-md-offset-1 add-photo">
+							<span class="add-photo__title">Ваше фото:</span>
+							<img class="img-responsive img-rounded add-photo__image" src="../public/images/user.jpg" alt="photo">
+							<div class="form-group">
+								<label for="load-photo">Выберите файл:</label>
+								<input type="file" id="load-photo">
+							</div>
+						</div>
+						<div class="col-md-6 col-md-offset-1">
+							<div class="form-group">
+								<label for="user-name">Ваше имя: *</label>
+								<input type="text" class="form-control" id="user-name" placeholder="Ваше имя">
+							</div>
+							<div class="form-group">
+								<label for="user-email">Email: *</label>
+								<input type="email" class="form-control" id="user-email" placeholder="Email">
+							</div>
+							<div class="form-group">
+								<label for="user-password">Пароль: *</label>
+								<input type="password" class="form-control" id="user-password" placeholder="Пароль">
+							</div>
+							<div class="form-group">
+								<label for="confirm-password">Подтвердите пароль: *</label>
+								<input type="password" class="form-control" id="confirm-password" placeholder="Подтвердите пароль">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 col-md-offset-1">
+							<div class="form-group">
+								<label for="date-of-birth">Дата рождения:</label>
+								<input type="text" class="form-control" id="date-of-birth">
+							</div>
+							<div class="form-group">
+								<label for="education">Образование:</label>
+								<select class="form-control" id="education">
+									<option>Выберите вариант:</option>
+									<option>Высшее</option>
+									<option>Среднее</option>
+									<option>Средне-специальное</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="country">Страна:</label>
+								<select class="form-control" id="country">
+									<option>Выберите вариант:</option>
+									<option>Украина</option>
+									<option>Россия</option>
+									<option>США</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="city">Город:</label>
+								<select class="form-control" id="city">
+									<option>Выберите вариант:</option>
+									<option>Харьков</option>
+									<option>Киев</option>
+									<option>Вашингтон</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="row margin-top-10">
+						<div class="col-md-4 col-md-offset-4">
+							<input type="submit" class="btn btn-primary" value="Зарегистрироваться">
+						</div>
+					</div>
+				</form>
+				<hr>
+				<div class="row">
+					<div class="col-md-4 col-md-offset-4 auth">
+						<span class="auth__title">Уже зарегистрирован?</span>
+						<button type="button" class="btn btn-success auth__btn">Авторизация</button>
+					</div>
+				</div>
+			</section>
+
+		</div>
+	</div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../public/js/bootstrap.js"></script>
+</body>
+</html>

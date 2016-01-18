@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>itcourses | Admin - User</title>
+    <link rel="stylesheet" href="../public/css/bootstrap.css">
+    <!-- Подключаю свои стили -->
+    <link rel="stylesheet" href="../public/css/main.css">
+    <link rel="stylesheet" href="../public/css/style.css">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-default navbar-fixed-top top-menu-black">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed burger-button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#"><b>ITCourses</b></a>
+                        </div>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="header_text_al">
+                                    <a href="#">
+                                        <span class="glyphicon glyphicon-comment"></span>
+                                    </a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" id="pad_null" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <span class="glyphicon glyphicon-user"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="#">My Courses</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">View Profile</a>
+                                        </li>
+                                        <li role="separator" class="divider"></li>
+                                        <li>
+                                            <a href="#">Log out</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <!--header with foto-->
+                            <!--<ul class="nav navbar-nav navbar-right">-->
+                            <!--<li class="header_text_al">-->
+                            <!--<span>Yuriy Reva</span>-->
+                            <!--</li>-->
+                            <!--<li class="dropdown">-->
+                            <!--<a href="#" class="dropdown-toggle" id="pad_null" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">-->
+                            <!--<img class="img-circle mini_img_header" src="images/mini_profile.jpg">-->
+                            <!--</a>-->
+                            <!--<ul class="dropdown-menu">-->
+                            <!--<li>-->
+                            <!--<a href="#">My Courses</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                            <!--<a href="#">View Profile</a>-->
+                            <!--</li>-->
+                            <!--<li role="separator" class="divider"></li>-->
+                            <!--<li>-->
+                            <!--<a href="#">Log out</a>-->
+                            <!--</li>-->
+                            <!--</ul>-->
+                            <!--</li>-->
+                            <!--</ul>-->
+                            <!--end header with foto-->
+                            <form class="navbar-form" id="search" role="search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="container">
+    <div class="col-md-12">
+        <nav class="row">
+            <ol class="breadcrumb">
+                <li><a href="">Главная</a></li>
+                <li><a href="">Настройки</a></li>
+                <li class="active">Пользователи</li>
+            </ol>
+        </nav>
+        <header class="row">
+            <div class="col-md-offset-3 col-md-9">
+                <h1>Пользователь: Jhon Doe</h1>
+            </div>
+        </header>
+        <div class="row">
+            <aside class="col-md-3 menu">
+                <div class="well">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li><a href="/">Курсы</a></li>
+                        <li><a href="">Авторы</a></li>
+                        <li class="active"><a href="">Пользователи</a></li>
+                        <li><a href="">Категории</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <section class="col-md-9 user-info">
+                <div class="well">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Фото</th>
+                            <th>e-mail</th>
+                            <th>Изучает</th>
+                            <th>Прошел</th>
+                            <th>Действия</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><img src="../public/images/author_house.jpg" alt="" class="img-responsive"></td>
+                            <td>md@email.com</td>
+                            <td>
+                                <ol>
+                                    <li><a href="">Оптимизация SQL запросов,  12 видеоуроков, тестирвоание, + бесплатная книга для скачивания</a></li>
+                                    <li><a href="">Верстка HTML5, CSS3</a></li>
+                                    <li><a href="">Оптимизация SQL запросов,  12 видеоуроков, тестирвоание, + бесплатная книга для скачивания</a></li>
+                                </ol>
+                            </td>
+
+                            <td>
+                                <ol>
+                                    <li><a href="">Оптимизация SQL запросов,  12 видеоуроков, тестирвоание, + бесплатная книга для скачивания</a></li>
+
+                                </ol>
+                            </td>
+                            <td class="text-right">
+                                <div class="pull-right switch">
+                                    <input id="cmn-toggle-3" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+                                    <label for="cmn-toggle-3"></label>
+                                </div>
+                                <div class="btn-container center-block">
+                                    <a class='btn btn-admin btn-info btn-sm' href="#"><span class="glyphicon glyphicon-edit"></span> edit</a>
+                                </div>
+                                <div class="btn-container center-block">
+                                    <a href="#" class="btn btn-admin btn-danger btn-sm"><span class="glyphicon glyphicon-remove"></span> delete</a>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<!--FOOTER-->
+<footer id="footer" >
+    <div class="container-fluid">
+        <div class="navbar navbar-default">
+            <div class="container col-md-12 text-center">
+                <div class="row text-center">
+                    <ul class="nav navbar-nav navbar-center footer-menu">
+                        <li><a href="#">Courses</a></li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li><a href="#">About us</a></li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li><a href="#">Contacts</a></li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <p class="navbar-center copyright-mar">Copyright &copy; 2015 - Free education
+                        <a href="#" >ITCourses.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="../public/js/jquery-1.11.3.min.js"></script>
+<script src="../public/js/bootstrap.min.js"></script>
+</body>
+</html>
