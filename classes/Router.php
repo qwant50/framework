@@ -10,22 +10,24 @@
 
 class Router
 {
+    public $url;
     public $page;
     public $controller = null;
     public $model;
     public $view;
 
-    public function __construct()
+    public function __construct($requestURI)
     {
-        $url = $_SERVER["REQUEST_URI"];
-        $url = rtrim($url, '/');
+        $url = $requestURI;
+        $url = rtrim($url,'/');
         $url = explode('/', $url);
-        $file = DIR_TO_PAGES.$url[3].TEMPLATE_EXTENSION;
-       // var_dump($url);
-        $this->page = file_exists($file) ? $url[3] : 'error404';
-//echo $this->page;
-
-        $view = new View();
-        echo $view->render($this->page,'layouts' . DS . 'default');
+        //var_dump($url);
+        if (!isset($url[3])) $this->page = 'landing';
+        else {
+            $file = DIR_TO_PAGES.$url[3].TEMPLATE_EXTENSION;
+            $this->page = file_exists($file) ? $url[3] : 'error404';
+        }
+        $this->view = new View();
+        echo $this->view->render($this->page,'layouts' . DS . 'default');
     }
 }
