@@ -1,33 +1,37 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: phpstudent
  * Date: 1/12/16
  * Time: 3:30 PM
  */
-
-
-
 class Router
 {
     public $url;
-    public $page;
-    public $controller = null;
-    public $model;
+    public $controller = 'landing';
+    public $action = 'Index';
     public $view;
+    public $params = [];
 
     public function __construct($requestURI)
     {
         $url = $requestURI;
-        $url = rtrim($url,'/');
+        $url = trim($url, '/');
         $url = explode('/', $url);
-        //var_dump($url);
-        if (!isset($url[3])) $this->page = 'landing';
-        else {
-            $file = DIR_TO_PAGES.$url[3].TEMPLATE_EXTENSION;
-            $this->page = file_exists($file) ? $url[3] : 'error404';
-        }
+       // var_dump($url);
+
+        if (isset($url[2])) {
+            $file = DIR_TO_PAGES . $url[2] . TEMPLATE_EXTENSION;
+            $this->controller = file_exists($file) ? $url[2] : 'error404';
+        };
+        if (isset($url[3])) {
+            $action = $url[3];
+        };
+
+    }
+    public function run(){
         $this->view = new View();
-        echo $this->view->render($this->page,'layouts' . DS . 'default');
+        echo $this->view->render($this->controller, 'layouts' . DS . 'default');
     }
 }
