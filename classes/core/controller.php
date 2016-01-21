@@ -5,11 +5,11 @@
  * Date: 13-Jan-16
  * Time: 23:49
  */
-
-
+namespace foxtrot;
 class Controller {
 
     public $model;
+
     public $view;
 
     function __construct()
@@ -19,5 +19,6 @@ class Controller {
 
     function action_index()
     {
+        echo 'actionIndex';
     }
 }
