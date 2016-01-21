@@ -7,6 +7,7 @@
  * Time: 3:30 PM
  */
 namespace foxtrot;
+use foxtrot\core\View;
 class Bootstrap
 {
     public $url;

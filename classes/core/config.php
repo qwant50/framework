@@ -16,6 +16,6 @@ define('DIR_TO_CLASSES', __ROOT__.'classes'. DS);
 define('DIR_TO_PAGES', __ROOT__.'pages'.DS);
 define('TEMPLATE_EXTENSION', '.phtml');
 
-require_once DIR_TO_CLASSES . 'Autoloader.php';
-spl_autoload_register("Autoloader::myAutoload");
+//require_once DIR_TO_CLASSES . 'Autoloader.php';
+//spl_autoload_register("Autoloader::myAutoload");
 

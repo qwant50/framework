@@ -6,7 +6,7 @@
  * Date: 14-Jan-16
  * Time: 10:08
  */
-namespace foxtrot;
+namespace foxtrot\core;
 class View
 {
     //public $template_view; // здесь можно указать общий вид по умолчанию.
