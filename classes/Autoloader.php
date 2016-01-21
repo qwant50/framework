@@ -20,6 +20,7 @@ Class Autoloader
 
         foreach ($pathes as $path):
             $fileName = DIR_TO_CLASSES . $path. str_replace('\\', DS, $relative_class) . ".php";
+            echo $fileName;
             if (file_exists($fileName)) {
                 require_once $fileName;
                 return;

@@ -6,6 +6,7 @@
  * Date: 1/12/16
  * Time: 3:30 PM
  */
+namespace foxtrot;
 class Bootstrap
 {
     public $url;
@@ -26,7 +27,7 @@ class Bootstrap
             $this->controller = file_exists($file) ? $url[2] : 'error404';
         };
         if (isset($url[3])) {
-            $action = $url[3];
+            $this->action = $url[3];
         };
 
     }

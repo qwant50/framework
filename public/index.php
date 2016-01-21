@@ -5,6 +5,7 @@
  * Date: 1/8/16
  * Time: 4:21 PM
  */
+use foxtrot\Bootstrap;
 
 chdir(dirname(__DIR__));
 

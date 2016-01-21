@@ -6,6 +6,7 @@
  * Date: 13-Jan-16
  * Time: 23:53
  */
+namespace foxtrot;
 class Model
 {
     public function get_data()
