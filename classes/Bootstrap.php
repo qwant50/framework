@@ -6,7 +6,7 @@
  * Date: 1/12/16
  * Time: 3:30 PM
  */
-class Router
+class Bootstrap
 {
     public $url;
     public $controller = 'landing';
@@ -14,7 +14,7 @@ class Router
     public $view;
     public $params = [];
 
-    public function __construct($requestURI)
+    public function dispatch($requestURI)
     {
         $url = $requestURI;
         $url = trim($url, '/');
