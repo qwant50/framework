@@ -20,8 +20,5 @@ class Controller {
     {
         echo 'actionIndex';
     }
-    public function run($controller, $action, $params)
-    {
-        echo $this->view->render($controller, 'layouts' . DS . 'default');
-    }
+
 }

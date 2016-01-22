@@ -19,5 +19,7 @@ $bootstrap = new Bootstrap();  // default page
 
 $bootstrap->dispatch($_SERVER["REQUEST_URI"]);
 
-$controller = new Controller();
+echo $bootstrap->controller;
+$controller = new $bootstrap->controller;
 $controller->run($bootstrap->controller,$bootstrap->action, $bootstrap->params);
+

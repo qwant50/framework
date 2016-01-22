@@ -12,13 +12,15 @@ use foxtrot\core\View;
 
 class Bootstrap
 {
-    public $controller = 'landing';
+    public $controller = 'LandingController';
     public $action = 'Index';
     public $params = [];
 
     public function dispatch($requestURI)
     {
-        if ($requestURI === '') return;
+        if ($requestURI === '') {
+            return;
+        }
         $url = $requestURI;
 
         $queryStringStart = strpos($url, '?');
@@ -32,11 +34,13 @@ class Bootstrap
         $url = explode('/', $url);
         // var_dump($url);
 
-
+        // get controller
         if (isset($url[2])) {
-            $file = DIR_TO_PAGES . $url[2] . TEMPLATE_EXTENSION;
-            $this->controller = file_exists($file) ? $url[2] : 'error404';
+            $controllerName = ucfirst($url[2]) . 'Controller';
+            $file = DIR_TO_PAGES . $controllerName . TEMPLATE_EXTENSION;
+            $this->controller = file_exists($file) ? $controllerName : 'Error404Controller';
         };
+        // get action
         if (isset($url[3])) {
             $this->action = $url[3];
         };
