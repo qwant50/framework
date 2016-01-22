@@ -5,11 +5,10 @@
  * Date: 13-Jan-16
  * Time: 23:49
  */
-namespace foxtrot;
+namespace foxtrot\core;
 class Controller {
 
     public $model;
-
     public $view;
 
     function __construct()
@@ -17,8 +16,12 @@ class Controller {
         $this->view = new View();
     }
 
-    function action_index()
+    function actionIndex()
     {
         echo 'actionIndex';
+    }
+    public function run($controller, $action, $params)
+    {
+        echo $this->view->render($controller, 'layouts' . DS . 'default');
     }
 }

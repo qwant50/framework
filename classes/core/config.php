@@ -16,3 +16,5 @@ define('DIR_TO_CLASSES', __ROOT__.'classes'. DS);
 define('DIR_TO_PAGES', __ROOT__.'pages'.DS);
 define('TEMPLATE_EXTENSION', '.phtml');
 
+// #SetEnv APP_ENV dev  in httpd.conf
+// require_once 'config'. DS. getenv('APP_ENV');

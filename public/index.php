@@ -6,6 +6,7 @@
  * Time: 4:21 PM
  */
 use foxtrot\Bootstrap;
+use foxtrot\core\Controller;
 
 chdir(dirname(__DIR__));
 
@@ -13,7 +14,10 @@ require_once  realpath(__DIR__.DIRECTORY_SEPARATOR.'..') .DIRECTORY_SEPARATOR.'c
 
 require __DIR__ . '/../vendor/autoload.php';
 
+
 $bootstrap = new Bootstrap();  // default page
 
 $bootstrap->dispatch($_SERVER["REQUEST_URI"]);
-$bootstrap->run();
+
+$controller = new Controller();
+$controller->run($bootstrap->controller,$bootstrap->action, $bootstrap->params);
