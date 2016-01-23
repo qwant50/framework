@@ -2,22 +2,17 @@
 /**
  * Created by PhpStorm.
  * User: Qwant
- * Date: 13-Jan-16
- * Time: 23:49
+ * Date: 23-Jan-16
+ * Time: 15:21
  */
-namespace foxtrot\core;
-class Controller {
 
-    public $data;
-    public $model;
-    public $view;
+namespace foxtrot\controllers;
 
-    function __construct($data = [])
-    {
-        $this->data = $data;
-        $this->view = new View();
-    }
 
+use foxtrot\core\Controller;
+
+class MainController extends Controller
+{
     function actionIndex()
     {
         echo 'actionIndex';
