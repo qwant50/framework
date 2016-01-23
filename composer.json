@@ -1,7 +1,8 @@
 {
   "autoload": {
     "psr-4": {
-      "foxtrot\\": "classes/"
+      "qwant50\\": "classes/"
+
     }
   }
 }

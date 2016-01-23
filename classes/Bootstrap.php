@@ -6,7 +6,9 @@
  * Date: 1/12/16
  * Time: 3:30 PM
  */
-namespace foxtrot;
+namespace qwant50;
+
+use qwant50\controllers\MainController;
 
 class Bootstrap
 {
@@ -17,12 +19,12 @@ class Bootstrap
     public $routs = [
         "" =>                     ['controller' => 'main', 'action' => 'main'],
         "landing" =>              ['controller' => 'main', 'action' => 'index' ],
-        "admin-page-dashboard" => ['controller' => 'admin', 'action' => 'dashboard' ],
+        "admin-page-dashboard" => ['controller' => 'main', 'action' => 'dashboard' ],
     ];
 
     public function dispatch($requestURI)
     {
-        if ($requestURI === '') return;
+        if ($requestURI === '/') return;
         // prepare URI
         $requestURI = urldecode(trim($requestURI, '/'));
 
@@ -54,7 +56,10 @@ class Bootstrap
     }
 
     public function run(){
-        $controller_name = $this->controller . 'Controller';
-
+        $controllerName = $this->controller . 'Controller';
+      //  $controller = new $controllerName($this->params);
+        $controller = new MainController($this->params);
+        $actionName = $this->action . 'Action';
+        $controller->$actionName();
     }
 }

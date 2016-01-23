@@ -5,7 +5,7 @@
  * Date: 13-Jan-16
  * Time: 23:49
  */
-namespace foxtrot\core;
+namespace qwant50\core;
 class Controller {
 
     public $data;
@@ -18,12 +18,4 @@ class Controller {
         $this->view = new View();
     }
 
-    function actionIndex()
-    {
-        echo 'actionIndex';
-    }
-    public function run($controller, $action)
-    {
-        echo $this->view->render($controller, 'layouts' . DS . 'default');
-    }
 }

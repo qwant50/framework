@@ -6,19 +6,23 @@
  * Time: 15:21
  */
 
-namespace foxtrot\controllers;
+namespace qwant50\controllers;
 
-
-use foxtrot\core\Controller;
+use qwant50\core\Controller;
 
 class MainController extends Controller
 {
-    function actionIndex()
+    public function actionIndex()
     {
         echo 'actionIndex';
     }
-    public function run($controller, $action)
+    public function indexAction()
     {
-        echo $this->view->render($controller, 'layouts' . DS . 'default');
+        echo $this->view->render('landing', 'layouts' . DS . 'default');  //page, layout
+    }
+
+    public function dashboardAction()
+    {
+        echo $this->view->render('admin-page-dashboard', 'layouts' . DS . 'default');  //page, layout
     }
 }
