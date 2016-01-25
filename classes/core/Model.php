@@ -9,7 +9,24 @@
 namespace qwant50;
 class Model
 {
-    public function get_data()
+    public function find()
     {
+
     }
+
+    public function save()
+    {
+
+    }
+
+    public function update()
+    {
+
+    }
+
+    public function delete()
+    {
+
+    }
+
 }
