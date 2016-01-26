@@ -36,6 +36,9 @@ class Bootstrap
         // get path with params devided '/'
         $url = parse_url($requestURI, PHP_URL_PATH);
         $url = explode('/', $url);
+        array_shift($url);    //  fix
+        array_shift($url);      // fix
+
         // get params after action
         for ($i = 2; $i <= count($url); $i+=2) {
             if (isset($url[$i])) {
@@ -45,21 +48,26 @@ class Bootstrap
 
         $this->routing = implode('/',array_slice($url,0,2));
 
-        if (isset($this->routs[$this->routing])){
+        if (isset($this->routs[$this->routing])) {
             $this->controller = ucfirst($this->routs[$this->routing]['controller']);
             $this->action     = strtolower($this->routs[$this->routing]['action']);
         }
 
-/*        var_dump($this->controller);
+ /*       var_dump($url);
+        array_shift($url);
+        var_dump($url);
+        var_dump($this->controller);
         var_dump($this->action);
         exit;*/
     }
 
     public function run(){
-        $controllerName = $this->controller . 'Controller';
-      //  $controller = new $controllerName($this->params);
-        $controller = new MainController($this->params);
+        $controllerName = 'MainController';
+//        var_dump($controllerName);
+       // $controller = new $controllerName($this->params);
+        $controller = new controllers\MainController($this->params);
         $actionName = $this->action . 'Action';
         $controller->$actionName();
+        exit;
     }
 }

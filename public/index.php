@@ -8,7 +8,7 @@
 use qwant50\Bootstrap;
 
 
-require_once  realpath(dirname(__DIR__)) .DIRECTORY_SEPARATOR.'classes'.DIRECTORY_SEPARATOR. 'core'.DIRECTORY_SEPARATOR.'config.php';
+require_once  realpath(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'classes' . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'config.php';
 
 require __DIR__ . '/../vendor/autoload.php';
 
