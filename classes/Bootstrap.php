@@ -8,19 +8,12 @@
  */
 namespace qwant50;
 
-use qwant50\controllers\MainController;
-
 class Bootstrap
 {
     public $controller = 'landing';  // default controller
     public $action = 'Index';  // default action
     public $params = [];
     public $routing = '';
-    public $routs = [
-        "" =>                     ['controller' => 'main', 'action' => 'main'],
-        "landing" =>              ['controller' => 'main', 'action' => 'index' ],
-        "admin-page-dashboard" => ['controller' => 'main', 'action' => 'dashboard' ],
-    ];
 
     public function dispatch($requestURI)
     {
@@ -46,19 +39,9 @@ class Bootstrap
             }
         }
 
-        $this->routing = implode('/',array_slice($url,0,2));
+        if (isset($url[0])) $this->controller = ucfirst(htmlspecialchars($url[0]));
+        if (isset($url[1])) $this->action = strtolower(htmlspecialchars($url[1]));
 
-        if (isset($this->routs[$this->routing])) {
-            $this->controller = ucfirst($this->routs[$this->routing]['controller']);
-            $this->action     = strtolower($this->routs[$this->routing]['action']);
-        }
-
- /*       var_dump($url);
-        array_shift($url);
-        var_dump($url);
-        var_dump($this->controller);
-        var_dump($this->action);
-        exit;*/
     }
 
     public function run(){
@@ -73,7 +56,7 @@ class Bootstrap
             $actionName = 'indexAction';
         }
         $controllerObj->$actionName();
-        var_dump($controllerName);
+       // echo $controllerName;
        // exit;
     }
 }

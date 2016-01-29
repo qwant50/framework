@@ -5,8 +5,7 @@ ini_set('display_errors', 1);
 
 define('DS', DIRECTORY_SEPARATOR);
 define('__ROOT__', dirname(dirname(dirname(__DIR__))) . DS);
-var_dump(__ROOT__);
-define('DIR_TO_CLASSES', __ROOT__ . 'classes' . DS);
+//define('DIR_TO_CLASSES', __ROOT__ . 'classes' . DS);
 define('DIR_TO_PAGES', __ROOT__ . 'pages' . DS);
 define('TEMPLATE_EXTENSION', '.phtml');
 
