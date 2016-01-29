@@ -6,5 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'qwantmailer\\' => array($vendorDir . '/qwant50/mailermodule/src'),
     'qwant50\\' => array($baseDir . '/classes'),
 );
