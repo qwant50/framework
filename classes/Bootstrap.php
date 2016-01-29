@@ -12,8 +12,8 @@ use qwant50\controllers\MainController;
 
 class Bootstrap
 {
-    public $controller = 'landing';
-    public $action = 'Index';
+    public $controller = 'landing';  // default controller
+    public $action = 'Index';  // default action
     public $params = [];
     public $routing = '';
     public $routs = [
@@ -62,12 +62,18 @@ class Bootstrap
     }
 
     public function run(){
-        $controllerName = 'MainController';
-//        var_dump($controllerName);
-       // $controller = new $controllerName($this->params);
-        $controller = new controllers\MainController($this->params);
+        $controllerName = 'qwant50\controllers\\'. $this->controller.'Controller';
         $actionName = $this->action . 'Action';
-        $controller->$actionName();
-        exit;
+        if (!class_exists($controllerName)){
+            $controllerName = 'qwant50\controllers\\Error404Controller';
+            $actionName = 'indexAction';
+        };
+        $controllerObj = new $controllerName($this->params);
+        if (!method_exists($controllerObj, $actionName)) {
+            $actionName = 'indexAction';
+        }
+        $controllerObj->$actionName();
+        var_dump($controllerName);
+       // exit;
     }
 }
