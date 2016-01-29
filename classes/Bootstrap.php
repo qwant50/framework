@@ -8,6 +8,7 @@
  */
 namespace qwant50;
 
+
 class Bootstrap
 {
     public $controller = 'landing';  // default controller
