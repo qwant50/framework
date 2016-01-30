@@ -30,8 +30,8 @@ class Bootstrap
         // get path with params devided '/'
         $url = parse_url($requestURI, PHP_URL_PATH);
         $url = explode('/', $url);
-        array_shift($url);    //  fix
-        array_shift($url);      // fix
+      //  array_shift($url);    //  fix
+      //  array_shift($url);      // fix
 
         // get params after action
         for ($i = 2; $i <= count($url); $i+=2) {
@@ -48,6 +48,8 @@ class Bootstrap
     public function run(){
         $controllerName = 'qwant50\controllers\\'. $this->controller.'Controller';
         $actionName = $this->action . 'Action';
+    //    echo $controllerName;
+    //    exit;
         if (!class_exists($controllerName)){
             $controllerName = 'qwant50\controllers\\Error404Controller';
             $actionName = 'indexAction';
@@ -57,7 +59,7 @@ class Bootstrap
             $actionName = 'indexAction';
         }
         $controllerObj->$actionName();
-       // echo $controllerName;
-       // exit;
+        echo $controllerName;
+        exit;
     }
 }

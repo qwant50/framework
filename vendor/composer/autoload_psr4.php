@@ -8,4 +8,5 @@ $baseDir = dirname($vendorDir);
 return array(
     'qwantmailer\\' => array($vendorDir . '/qwant50/mailermodule/src'),
     'qwant50\\' => array($baseDir . '/classes'),
+    'Symfony\\Component\\Process\\' => array($vendorDir . '/symfony/process'),
 );

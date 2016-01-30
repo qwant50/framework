@@ -1,12 +1,19 @@
 {
   "require": {
-    "twbs/bootstrap": "3.3.*",
-    "qwant50/mailermodule": "1.0.*"
+    "robloach/component-installer": "^0.2.3",
+    "qwant50/mailermodule": "1.0.*",
+    "components/jquery": "2.*.*",
+    "components/bootstrap": "^3.3"
+  },
+  "config": {
+    "component-dir": "public/components",
+    "component-baseurl": "public"
   },
   "autoload": {
     "psr-4": {
       "qwant50\\": "classes/"
-
     }
   }
+
 }
+
