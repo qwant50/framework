@@ -59,7 +59,7 @@ class Bootstrap
             $actionName = 'indexAction';
         }
         $controllerObj->$actionName();
-        echo $controllerName;
-        exit;
+     //   echo $controllerName;
+     //   exit;
     }
 }
