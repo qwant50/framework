@@ -8,8 +8,9 @@
 
 namespace qwant50\models;
 
+use qwant50\core\Model;
 
-class indexModel
+class indexModel extends Model
 {
 
 }

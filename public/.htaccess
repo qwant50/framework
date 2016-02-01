@@ -1,12 +1,20 @@
+SetEnv APP_ENV dev
+
 AddDefaultCharset utf-8
 
-RewriteEngine on
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteBase /
 
-php_value upload_max_filesize 50M
-php_value post_max_size 50M
+	# loop stopping
+	RewriteCond %{ENV:REDIRECT_STATUS} 200
+	RewriteRule .* - [L]
 
-Options FollowSymlinks
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ index.php [L,QSA]
-
+	RewriteCond %{REQUEST_FILENAME} -s [OR]
+	RewriteCond %{REQUEST_FILENAME} -l [OR]
+	RewriteCond %{REQUEST_FILENAME} -d [OR]
+	RewriteCond %{REQUEST_URI} ^/(css|font|img|js|uploads) [OR]
+	RewriteCond %{REQUEST_URI} \.(ico|jpe?g|png|svg|gif|swf|flv)$
+	RewriteRule ^.*$ - [NC,L]
+	RewriteRule ^.*$ index.php [NC,L]
+</IfModule>

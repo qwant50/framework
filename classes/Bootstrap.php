@@ -11,18 +11,22 @@ namespace qwant50;
 
 class Bootstrap
 {
+    public $baseUrl = null;
     public $controller = 'landing';  // default controller
     public $action = 'Index';  // default action
     public $params = [];
-    public $routing = '';
 
-    public function dispatch($requestURI)
+    public function router()
     {
-        if ($requestURI === '/') return;
+        $requestURI = $_SERVER["REQUEST_URI"];
+
+        if ($requestURI === '/') {
+            return;
+        }
         // prepare URI
         $requestURI = urldecode(trim($requestURI, '/'));
 
-        // query string   www.site.com/controller/action/param1/param2/param3?param4=param5&param6=param7
+        // query string   www.site.com/controller/action/key1/value1/key2/value2?key3=value3&key4=value4
 
         // get params after '?'
         parse_str(parse_url($requestURI, PHP_URL_QUERY), $this->params);
@@ -30,27 +34,32 @@ class Bootstrap
         // get path with params devided '/'
         $url = parse_url($requestURI, PHP_URL_PATH);
         $url = explode('/', $url);
-      //  array_shift($url);    //  fix
-      //  array_shift($url);      // fix
+        //  array_shift($url);    //  fix
+        //  array_shift($url);      // fix
+
+        if (isset($url[0])) {
+            $this->controller = ucfirst(htmlspecialchars($url[0]));
+        }
+        if (isset($url[1])) {
+            $this->action = strtolower(htmlspecialchars($url[1]));
+        }
 
         // get params after action
-        for ($i = 2; $i <= count($url); $i+=2) {
+        for ($i = 2; $i <= count($url); $i += 2) {
             if (isset($url[$i])) {
-                $this->params[$url[$i]] = (isset($url[$i+1])) ? $url[$i+1] : '';
+                $this->params[$url[$i]] = (isset($url[$i + 1])) ? $url[$i + 1] : '';
             }
         }
 
-        if (isset($url[0])) $this->controller = ucfirst(htmlspecialchars($url[0]));
-        if (isset($url[1])) $this->action = strtolower(htmlspecialchars($url[1]));
 
     }
 
-    public function run(){
-        $controllerName = 'qwant50\controllers\\'. $this->controller.'Controller';
+    public function dispatch()
+    {
+        $controllerName = 'qwant50\controllers\\' . $this->controller . 'Controller';
         $actionName = $this->action . 'Action';
-    //    echo $controllerName;
-    //    exit;
-        if (!class_exists($controllerName)){
+
+        if (!class_exists($controllerName)) {
             $controllerName = 'qwant50\controllers\\Error404Controller';
             $actionName = 'indexAction';
         };
@@ -59,7 +68,5 @@ class Bootstrap
             $actionName = 'indexAction';
         }
         $controllerObj->$actionName();
-     //   echo $controllerName;
-     //   exit;
     }
 }

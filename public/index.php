@@ -13,11 +13,11 @@ require_once  dirname(__DIR__) . DIRECTORY_SEPARATOR . 'classes' . DIRECTORY_SEP
 require __DIR__ . '/../vendor/autoload.php';
 
 
-$bootstrap = new Bootstrap();  // default page
+$app = new Bootstrap();  // default page
 
-$bootstrap->dispatch($_SERVER["REQUEST_URI"]);
+$app->router();
 
-$bootstrap->run();
+$app->dispatch();
 
 
 

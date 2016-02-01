@@ -66,13 +66,13 @@ body {
 
 @font-face {
     font-family: "Myriad Set Pro";
-    src: url("../fonts/myriad-set-pro_thin.ttf");
+    src: url("/fonts/myriad-set-pro_thin.ttf");
     font-weight: normal;
 }
 
 @font-face {
     font-family: "Myriad Set Pro";
-    src: url("../fonts/myriad-set-pro_bold.ttf");
+    src: url("/fonts/myriad-set-pro_bold.ttf");
     font-weight: bold;
 }
 

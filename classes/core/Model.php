@@ -6,7 +6,7 @@
  * Date: 13-Jan-16
  * Time: 23:53
  */
-namespace qwant50;
+namespace qwant50\core;
 class Model
 {
     public function find()
